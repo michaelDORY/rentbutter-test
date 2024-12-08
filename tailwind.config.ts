@@ -20,7 +20,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Kumbh', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         app: '12px',
