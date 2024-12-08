@@ -18,4 +18,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn',
     },
   },
+  {
+    ignores: ['node_modules', 'dist', 'build', 'coverage'],
+  },
 ];

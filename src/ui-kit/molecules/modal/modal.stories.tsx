@@ -30,7 +30,7 @@ const SimpleModalContent = () => (
     </Typography>
     <div className="flex space-x-4">
       <Button>Confirm</Button>
-      <Button variant="secondary">Cancel</Button>
+      <Button variant="link">Cancel</Button>
     </div>
   </div>
 );
