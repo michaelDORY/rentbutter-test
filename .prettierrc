@@ -9,17 +9,19 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "jsxBracketSameLine": false,
-  "endOfLine": "lf",
-  "tailwindConfig": "./tailwind.config.js",
-  "tailwindAttributes": ["wrapperClassName", "wrapClassName", "rootClassName"],
-  "tailwindFunctions": ["classNames", "classnames", "twMerge"],
-  "overrides": [
-    {
-      "files": ".prettierrc",
-      "options": {
-        "parser": "json"
-      }
-    }
+  "endOfLine": "auto",
+  "tailwindConfig": "./tailwind.config.ts",
+  "tailwindAttributes": [
+    "wrapperClassName",
+    "wrapClassName",
+    "rootClassName"
   ],
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "tailwindFunctions": [
+    "classNames",
+    "classnames",
+    "twMerge"
+  ],
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ]
 }
