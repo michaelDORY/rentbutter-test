@@ -1,2 +1,2 @@
-export * from './feature-card/feature-card-list';
+export * from './feature-card/feature-card';
 export * from './modal/modal';

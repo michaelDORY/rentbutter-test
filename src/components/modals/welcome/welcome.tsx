@@ -1,8 +1,24 @@
 import { FC } from 'react';
-import { Button, FeatureCardList, Modal, Typography } from '@/ui-kit';
-import shieldIcon from '@/assets/icons/shield-protected.svg';
-import thunderIcon from '@/assets/icons/thunder-move.svg';
+import { Button, Modal, Typography } from '@/ui-kit';
+import { Shield, Zap } from 'lucide-react';
 import emblemIcon from '@/assets/icons/emblem.svg';
+import clsx from 'clsx';
+import { FeatureCard } from '@/ui-kit/molecules/feature-card/feature-card.tsx';
+
+const FEATURES = [
+  {
+    icon: Shield,
+    title: 'Encrypted & Secure',
+    description:
+      'We encrypt your personal data and your credentials will remain private.',
+  },
+  {
+    icon: Zap,
+    title: 'Convenient & Fast',
+    description:
+      'Complete your application in under 10 minutes and get approved faster.',
+  },
+];
 
 export const WelcomeModal: FC = () => {
   return (
@@ -15,23 +31,19 @@ export const WelcomeModal: FC = () => {
         started now!
       </Typography>
 
-      <FeatureCardList
-        className="mt-8"
-        features={[
-          {
-            icon: shieldIcon,
-            title: 'Encrypted & Secure',
-            description:
-              'We encrypt your personal data and your credentials will remain private.',
-          },
-          {
-            icon: thunderIcon,
-            title: 'Convenient & Fast',
-            description:
-              'Complete your application in under 10 minutes and get approved faster.',
-          },
-        ]}
-      />
+      <div
+        className={clsx(
+          'mt-8 rounded-[4px] border border-neutral-100 bg-white shadow-[0_2px_4px_0px_rgba(13,18,28,0.08)]',
+        )}
+      >
+        {FEATURES.map((featureProps, index) => (
+          <FeatureCard
+            key={index}
+            {...featureProps}
+            hasTopBorder={index !== 0}
+          />
+        ))}
+      </div>
 
       <Typography
         variant="small"

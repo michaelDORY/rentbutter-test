@@ -1,14 +1,14 @@
 import { Meta, type StoryObj } from '@storybook/react';
-import { FeatureCardList } from './feature-card-list';
 import { Shield } from 'lucide-react';
+import { FeatureCard } from './feature-card.tsx';
 
-const featureCardListMeta: Meta<typeof FeatureCardList> = {
+const featureCardMeta: Meta<typeof FeatureCard> = {
   title: 'Molecules/FeatureCard',
-  component: FeatureCardList,
+  component: FeatureCard,
 };
 
-export default featureCardListMeta;
-type Story = StoryObj<typeof FeatureCardList>;
+export default featureCardMeta;
+type Story = StoryObj<typeof FeatureCard>;
 
 export const Default: Story = {
   args: {

@@ -6,17 +6,17 @@ import clsx from 'clsx';
 const iconColors = ['primary', 'secondary', 'neutral'] as const;
 type IconColor = (typeof iconColors)[number];
 
-const iconVariants = cva('flex-shrink-0 rounded-full p-2', {
+const iconVariants = cva('flex-shrink-0', {
   variants: {
     color: {
-      primary: 'bg-primary/10',
-      secondary: 'bg-secondary/10',
-      neutral: 'bg-neutral-100',
+      primary: 'text-primary',
+      secondary: 'text-secondary',
+      neutral: 'text-neutral-500',
     },
     size: {
-      default: 'w-10 h-10',
-      sm: 'w-8 h-8',
-      lg: 'w-12 h-12',
+      default: 'w-6 h-6',
+      sm: 'w-4 h-4',
+      lg: 'w-8 h-8',
     },
   },
   defaultVariants: {
@@ -41,14 +41,7 @@ export const Icon: FC<IconProps> = ({
 }) => {
   return (
     <div className={iconVariants({ color, size, className })} {...props}>
-      <Icon
-        className={clsx(
-          color === 'primary' && 'text-primary',
-          color === 'secondary' && 'text-secondary',
-          color === 'neutral' && 'text-neutral-500',
-          'h-full w-full',
-        )}
-      />
+      <Icon className={clsx('h-full w-full', className)} />
     </div>
   );
 };
