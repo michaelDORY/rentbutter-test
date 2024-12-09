@@ -6,21 +6,20 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#71CFEB',
-          50: '#E6F6FC',
-          100: '#B8EAF5',
-          900: '#1A8CB3',
+          DEFAULT: '#213656',
+          600: '#3a7088',
+          900: '#213656',
         },
         neutral: {
           50: '#F9FAFB',
-          100: '#F3F4F6',
+          100: '#ebf0f4',
           500: '#6B7280',
-          600: '#4B5563',
-          700: '#374151',
+          600: '#4b5565',
+          700: '#0d121c',
         },
       },
       fontFamily: {
-        sans: ['Kumbh', 'system-ui', 'sans-serif'],
+        kumbh: ['Kumbh Sans', 'sans-serif'],
       },
       borderRadius: {
         app: '12px',

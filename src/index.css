@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Kumbh';
+  src: url('./assets/fonts/Kumbh/KumbhSans-VariableFont_YOPQ,wght.ttf')
+    format('truetype');
+  font-display: swap;
+}
+
+.modal-bg {
+  background:
+    center/cover url(src/assets/images/lines-texture.png),
+    bottom/contain no-repeat url(src/assets/images/image-bottom.png),
+    linear-gradient(0deg, white 0%, #f0fafe 100%);
+}

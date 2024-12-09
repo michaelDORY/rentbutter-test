@@ -4,11 +4,11 @@ import { cva, VariantProps } from 'class-variance-authority';
 const typographyVariants = cva('', {
   variants: {
     variant: {
-      h1: 'text-3xl font-bold text-neutral-700',
-      h2: 'text-2xl font-semibold text-neutral-700',
-      h3: 'text-xl font-medium text-neutral-700',
-      body: 'text-base text-neutral-600',
-      small: 'text-sm text-neutral-500',
+      h1: 'text-3xl font-bold text-neutral-700 tracking-[-0.02em] leading-[1.32em]',
+      h2: 'text-2xl font-semibold text-neutral-700 tracking-[-0.02em] leading-[1.32em]',
+      h3: 'text-[12px] font-semibold text-neutral-700 tracking-[0.005em] leading-[1.36em]',
+      body: 'text-[14px] tracking-[0.005em] leading-[1.42em]',
+      small: 'text-[12px] text-neutral-600 tracking-[0.005em] leading-[1.36em]',
     },
     align: {
       left: 'text-left',

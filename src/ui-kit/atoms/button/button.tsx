@@ -7,18 +7,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: [
-          'rounded-lg bg-primary text-white hover:bg-primary/90',
+          'rounded-[4px] bg-primary text-white hover:bg-primary/90',
           'hover:shadow-sm focus:ring-2 focus:ring-offset-2',
         ],
         outline: [
-          'rounded-lg border border-primary text-primary hover:bg-primary/10 hover:shadow-sm focus:ring-2 focus:ring-offset-2',
+          'rounded-[4px] border border-primary text-primary hover:bg-primary/10 hover:shadow-sm focus:ring-2 focus:ring-offset-2',
         ],
-        link: ['text-primary hover:underline bg-transparent '],
+        link: ['text-primary underline bg-transparent '],
       },
       size: {
-        default: 'py-3 px-4 text-base',
+        default: 'py-2.5 px-4 text-[14px] font-semibold',
         sm: 'py-2 px-3 text-sm',
-        lg: 'py-4 px-5 text-lg',
+        lg: 'py-4 px-5 text-lg font-semibold',
       },
       fullWidth: {
         true: 'w-full',
