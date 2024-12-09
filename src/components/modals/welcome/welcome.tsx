@@ -1,9 +1,7 @@
 import { FC } from 'react';
-import { Button, Modal, Typography } from '@/ui-kit';
+import { Button, FeatureCardList, Modal, Typography } from '@/ui-kit';
 import { Shield, Zap } from 'lucide-react';
 import emblemIcon from '@/assets/icons/emblem.svg';
-import clsx from 'clsx';
-import { FeatureCard } from '@/ui-kit/molecules/feature-card/feature-card.tsx';
 
 const FEATURES = [
   {
@@ -31,19 +29,7 @@ export const WelcomeModal: FC = () => {
         started now!
       </Typography>
 
-      <div
-        className={clsx(
-          'mt-8 rounded-[4px] border border-neutral-100 bg-white shadow-[0_2px_4px_0px_rgba(13,18,28,0.08)]',
-        )}
-      >
-        {FEATURES.map((featureProps, index) => (
-          <FeatureCard
-            key={index}
-            {...featureProps}
-            hasTopBorder={index !== 0}
-          />
-        ))}
-      </div>
+      <FeatureCardList className="mt-8" features={FEATURES} />
 
       <Typography
         variant="small"
