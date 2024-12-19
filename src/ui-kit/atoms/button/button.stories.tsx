@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
+import { X, ChevronLeft } from 'lucide-react';
 import { Button } from './button.tsx';
 
 const buttonMeta: Meta<typeof Button> = {
@@ -8,7 +8,13 @@ const buttonMeta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['primary', 'secondary', 'outline'],
+      options: [
+        'primary',
+        'alternative',
+        'secondary',
+        'ghostUnderline',
+        'icon',
+      ],
     },
     size: {
       control: { type: 'select' },
@@ -30,17 +36,48 @@ export const Primary: Story = {
   },
 };
 
-export const Outline: Story = {
+export const Alternative: Story = {
   args: {
-    children: 'Outline Button',
-    variant: 'outline',
+    children: 'Alternative Button',
+    variant: 'alternative',
   },
 };
 
-export const Link: Story = {
+export const Secondary: Story = {
   args: {
-    children: 'Button Link',
-    variant: 'link',
+    children: 'Secondary Button',
+    variant: 'secondary',
+  },
+};
+
+export const GhostUnderline: Story = {
+  args: {
+    children: 'Ghost Underline',
+    variant: 'ghostUnderline',
+  },
+};
+
+export const NavigateBack: Story = {
+  args: {
+    children: (
+      <>
+        <ChevronLeft className="h-5 w-5 text-primary" />
+      </>
+    ),
+    variant: 'icon',
+    size: 'sm',
+  },
+};
+
+export const Close: Story = {
+  args: {
+    children: (
+      <>
+        <X className="h-5 w-5 text-primary" />
+      </>
+    ),
+    variant: 'icon',
+    size: 'sm',
   },
 };
 
@@ -57,6 +94,25 @@ export const Sizes: Story = {
       <Button size="sm">Small</Button>
       <Button size="default">Default</Button>
       <Button size="lg">Large</Button>
+    </div>
+  ),
+};
+
+export const Disabled: Story = {
+  render: () => (
+    <div className="flex gap-4">
+      <Button variant={'primary'} disabled size="sm">
+        Primary
+      </Button>
+      <Button variant={'alternative'} disabled size="sm">
+        Alternative
+      </Button>
+      <Button variant={'secondary'} disabled size="sm">
+        Secondary
+      </Button>
+      <Button variant={'ghostUnderline'} disabled size="sm">
+        Ghost Underline
+      </Button>
     </div>
   ),
 };

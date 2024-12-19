@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .modal-bg {
-    background: center/cover url(src/assets/images/lines-texture.png),
-    bottom/contain no-repeat url(src/assets/images/image-bottom.png),
+  background:
+    center/cover url(src/assets/images/lines-texture.png),
     linear-gradient(0deg, white 0%, #f0fafe 100%);
 }
