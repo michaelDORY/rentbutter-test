@@ -11,7 +11,7 @@ const iconVariants = cva('flex-shrink-0', {
     color: {
       primary: 'text-primary',
       secondary: 'text-secondary',
-      neutral: 'text-neutral-500',
+      neutral: 'text-grey-500',
     },
     size: {
       default: 'w-6 h-6',
