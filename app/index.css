@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 56px;
+  --footer-height: 40px;
+}
+
+.modal-bg {
+  background:
+    center/cover url('/images/lines-texture.png'),
+    linear-gradient(0deg, white 0%, #f0fafe 100%);
+}
+
+.base-header-container {
+  padding: 12px 16px;
+}
+
+.base-content-container {
+  padding: 16px 24px;
+}
+
+[data-theme~='custom'] .tippy-content {
+  @apply rounded-[4px] bg-grey-800 px-2.5 py-2 font-kumbh text-white;
+}
+
+[data-theme~='custom'] .tippy-arrow {
+  color: bg-grey-800;
+}
