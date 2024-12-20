@@ -15,10 +15,16 @@ export default [
   {
     rules: {
       'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/no-empty-object-type': 'error',
+      '@typescript-eslint/no-unsafe-function-type': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_' },
+      ],
     },
   },
   {
-    ignores: ['node_modules', 'dist', 'build', 'coverage'],
+    ignores: ['node_modules', 'dist', 'build', 'coverage', '.next'],
   },
 ];
